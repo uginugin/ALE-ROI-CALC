@@ -45,14 +45,7 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
             onFocus={(e) => e.target.select()}
           />
           <div className="flex-center">
-
-            <button
-              className="small-button"
-              type="submit"
-            >
-              <img src={checkMark} alt='Ok' />
-            </button>
-
+            
             <button
               type="button"
               className="small-button"
@@ -62,6 +55,13 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
               }}
             >
               <img src={cancel} alt='Cancel editing' />
+            </button>
+
+            <button
+              className="small-button"
+              type="submit"
+            >
+              <img src={checkMark} alt='Ok' />
             </button>
 
           </div>
