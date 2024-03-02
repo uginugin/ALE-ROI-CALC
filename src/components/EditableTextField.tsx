@@ -28,35 +28,45 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
   }
 
   return (
-    <>
-      <div
-        className='flex-center'
-        onDoubleClick={() => setIsEditing(true)}>
-        {value ? value : '-'}
-      </div>
+    <div
+      className='flex-center'
+      onClick={() => setIsEditing(true)}>
+      {value ? value : '-'}
       {isEditing && (
         <form
-          className="flex-center"
-          onSubmit={onSubmitHandler}>
+          className="absolute"
+          onSubmit={onSubmitHandler}
+        >
           <input
             autoFocus
             defaultValue={value}
             onChange={(e) => inputRef.current = e.target.value}
             onFocus={(e) => e.target.select()}
           />
-          <button
-            className="small-button"
-            type="submit">
-            <img src={checkMark} alt='Ok' />
-          </button>
-          <button
-            className="small-button"
-            onClick={() => setIsEditing(false)}>
-            <img src={cancel} alt='Cancel editing' />
-          </button>
+          <div className="flex-center">
+
+            <button
+              className="small-button"
+              type="submit"
+            >
+              <img src={checkMark} alt='Ok' />
+            </button>
+
+            <button
+              type="button"
+              className="small-button"
+              onClick={(e) => {
+                e.stopPropagation()
+                setIsEditing(false)
+              }}
+            >
+              <img src={cancel} alt='Cancel editing' />
+            </button>
+
+          </div>
         </form>
       )}
-    </>
+    </div>
   )
 }
 export default EditableTextField

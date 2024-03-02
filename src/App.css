@@ -61,3 +61,7 @@ select {
   display: flex;
   justify-content: center;
 }
+
+.absolute {
+  position: absolute;
+}

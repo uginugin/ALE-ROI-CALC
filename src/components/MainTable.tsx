@@ -17,8 +17,6 @@ const MainTable = () => {
     setTable(prev => ({ ...prev, [name]: { 0: defaultSubRow } }))
   }
 
-  console.log(table)
-
   useEffect(() => {
     localStorage.setItem('table', JSON.stringify(table))
   }, [table])
