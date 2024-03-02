@@ -24,6 +24,7 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
       return
     }
     setIsEditing(false)
+    console.log('asd')
     onCellChange(columnName, inputRef.current)
   }
 
@@ -36,7 +37,6 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
         <form
           className="absolute"
           onSubmit={onSubmitHandler}
-          onBlur={() => setIsEditing(false)}
         >
           <input
             autoFocus
@@ -45,7 +45,7 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
             onFocus={(e) => e.target.select()}
           />
           <div className="flex-center">
-            
+
             <button
               type="button"
               className="small-button"
@@ -58,8 +58,8 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
             </button>
 
             <button
-              className="small-button"
               type="submit"
+              className="small-button"
             >
               <img src={checkMark} alt='Ok' />
             </button>
