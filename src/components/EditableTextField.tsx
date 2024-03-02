@@ -36,6 +36,7 @@ const EditableTextField: FC<TEditableTextFieldProps> = ({
         <form
           className="absolute"
           onSubmit={onSubmitHandler}
+          onBlur={() => setIsEditing(false)}
         >
           <input
             autoFocus
