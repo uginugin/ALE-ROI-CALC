@@ -1,3 +1,3 @@
 Примитивный калькулятор для подсчета ale и roi, выполнен в рамках предмета "Основы управления информационной безопасностью".
 
-[ССЫЛКА](https://https://uginugin.github.io/ALE-ROI-CALC/)
+[ССЫЛКА](https://uginugin.github.io/ALE-ROI-CALC/)
